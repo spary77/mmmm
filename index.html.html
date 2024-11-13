@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karbala Journey Message</title>
+    <style>
+        /* Styling for the background and container */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e0f7fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background: linear-gradient(to right, #ffe0e6, #d7c5f5);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .click-here {
+            font-size: 24px;
+            color: #000;
+            background: #333;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .click-here:hover {
+            background: #444;
+        }
+        .message {
+            display: none;
+            font-size: 20px;
+            color: #333;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .slideshow {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Initial content -->
+    <div class="container">
+        <h1 style="color: #000;">Click Here</h1>
+        <div class="click-here" onclick="showMessage()">Click here for Laila</div>
+    </div>
+
+    <!-- Hidden message and slideshow -->
+    <div id="message" class="message">
+        <p>Hey! 😊 Wishing you a safe and blessed journey to Karbala 🌹. May this trip bring you peace, blessings, and unforgettable spiritual experiences 🙏. As you visit the holy land, remember the courage and sacrifice of Imam Hussain (A.S), whose stand for truth and justice continues to inspire millions 🌟. Keep us in your prayers, and may Allah grant you strength, mercy, and a heart full of peace 💫. Travel safely and come back with beautiful memories and renewed faith ❤️✨.</p>
+        <div class="click-here" onclick="showSlideshow()">Click here for the slideshow</div>
+    </div>
+
+    <!-- Slideshow message -->
+    <div id="slideshow" class="slideshow">
+        <p style="font-size: 24px; color: #000;">I'm coming to the wedding. You asked me not to contact you, so I didn't message. Thank you.</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.querySelector(".container").style.display = "none";
+            document.getElementById("message").style.display = "block";
+        }
+
+        function showSlideshow() {
+            document.getElementById("message").style.display = "none";
+            document.getElementById("slideshow").style.display = "block";
+        }
+    </script>
+</body>
+</html>
